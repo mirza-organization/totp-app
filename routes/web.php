@@ -12,6 +12,7 @@ use Inertia\Inertia;
 // })->name('home');
 
 Route::get('/', [HomeController::class, 'show'])->name('home');
+Route::get('/get-info', [HomeController::class, 'getInfo'])->name('home.get.info');
 
 Route::controller(TotpController::class)->group(function () {
     Route::get('/search-account', 'search')->name('search.account');

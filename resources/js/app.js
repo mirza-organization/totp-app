@@ -2,6 +2,7 @@ import './bootstrap';
 
 import { createApp, h } from 'vue'
 import { createInertiaApp, Link, usePage } from '@inertiajs/vue3'
+import { TailwindPagination } from 'laravel-vue-pagination';
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 /* import the fontawesome icon component */
@@ -25,6 +26,7 @@ createInertiaApp({
       .component('font-awesome-icon', FontAwesomeIcon)
       .component('Link', Link)
       .component('usePage', usePage)
+      .component('TailwindPagination', TailwindPagination)
       .mount(el)
   },
 })

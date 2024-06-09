@@ -19,7 +19,7 @@ class TotpFactory extends Factory
         return [
             'account_name' => $this->faker->userName,
             'secret' => $this->faker->password,
-            'issuer' => $this->faker->company
+            'issuer' => substr($this->faker->company, 0, 10)
         ];
     }
 }

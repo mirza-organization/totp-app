@@ -10,8 +10,18 @@ class HomeController extends Controller
 {
     public function show()
     {
-        return Inertia::render('MyFirstWelcomePage', [
-            'info' => Totp::getAllInfo()
-          ]);
+        // $info = Totp::getAllInfo();
+
+        // return Inertia::render('MyFirstWelcomePage', [
+        //     'info' => $info
+        // ]);
+
+        return Inertia::render('MyFirstWelcomePage');
+    }
+
+    public function getInfo(Request $request)
+    {
+        // dd($request->page);
+        return response()->json(Totp::getAllInfo());
     }
 }

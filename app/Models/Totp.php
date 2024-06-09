@@ -53,6 +53,6 @@ class Totp extends Model
 
     public static function getAllInfo(string $search = ''): LengthAwarePaginator
     {
-        return self::where('account_name', 'like', '%' . $search . '%')->paginate(10);
+        return self::where('account_name', 'like', '%' . $search . '%')->paginate(5);
     }
 }
